@@ -3,16 +3,12 @@ import personnages.*;
 
 public class HistoireTP4 {
 	public static void main(String[] args) {
-		Commercant Marco = new Commercant("Marco", 20);
+		Yakuza Yaku = new Yakuza("Yaku Le Noir", "whisky", 30, "Warsong");
+		Commercant Marco = new Commercant("Marco", 15);
 		
-		Marco.direBonjour();
-		
-		Marco.seFaireExtorquer();
-		
-		Marco.gagnerArgent(15);
-		
-		Marco.parler("15 sous, je te remercie généreux donateur !");
-		
-		Marco.boire();
+		Yaku.direBonjour();
+		Yaku.parler("Tiens tiens, ne serait-ce pas un faible marchant qui passe par là ?");
+		Yaku.parler("Marco, si tu tiens à la vie, donne moi ta bourse !");
+		Yaku.extorquer(Marco);
 	}
 }
