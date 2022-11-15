@@ -24,17 +24,17 @@ public class Yakuza extends Humain {
 	public int perdre() {
 		int argentPerdu;
 		argentPerdu = super.getArgent();
-		super.perdreArgent(super.getArgent());
+		super.perdreArgent(argentPerdu);
 		reputation -= 1;
-		super.parler("J'ai perdu...");
+		super.parler("J'ai perdu mes " + argentPerdu + " sous, snif... J'ai déshonoré le clan des " + this.clan + ".");
 		
 		return argentPerdu;
 	}
 	
 	public int gagner(int gain) {
+		super.parler("Ce ronin pensait vraiment pouvoir batte " + super.getNom() + " du clan " + this.clan + " ? " + "Je l'ai dépouillé de ses " + gain + " sous !");
 		super.gagnerArgent(gain);
 		reputation += 1;
-		super.parler("J'ai gagné je suis le meilleur !");
 		
 		return gain;
 	}

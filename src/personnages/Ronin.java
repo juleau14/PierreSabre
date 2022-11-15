@@ -19,18 +19,17 @@ public class Ronin extends Humain {
 		int force = honneur * 2;
 		
 		if (force >= yakuzaAdverse.getReputation()) {
+			super.parler("Je t'ai eu petit yakuza !");
 			int gain = yakuzaAdverse.perdre();
 			gagnerArgent(gain);
 			honneur += 1;
-			super.parler("J'ai gagné GG");
 		}
 		
 		else {
+			parler("J'ai perdu contre ce yakuza, mon honneur et ma bourse en ont pris un coup");
 			honneur -= 1;
 			int perte = super.getArgent();
 			super.perdreArgent(super.getArgent());
-			
-			super.parler("J'ai perdu ... :(");
 			
 			yakuzaAdverse.gagner(perte);
 		}
