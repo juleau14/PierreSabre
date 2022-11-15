@@ -15,8 +15,7 @@ public class Yakuza extends Humain {
 	}
 	
 	public void extorquer(Commercant commercantVictime) {
-		int argentGagne;
-		argentGagne = commercantVictime.seFaireExtorquer();
+		int argentGagne = commercantVictime.seFaireExtorquer();
 		super.gagnerArgent(argentGagne);
 		super.parler("J'ai piqué " + argentGagne + " sous à " + commercantVictime.getNom() + ", ce qui me fait " + super.getArgent() + " dans ma poche. Hi ! Hi !");
 	}

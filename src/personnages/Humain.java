@@ -21,6 +21,10 @@ public class Humain {
 		return argent;
 	}
 	
+	public int getNombreConnaissances() {
+		return nombreConnaissances;
+	}
+	
 	public void parler(String texte) {
 		System.out.println(this.nom + " - " + texte);
 	}

@@ -10,6 +10,6 @@ public class HistoireTP5 {
 		 marco.faireConnaissance(akimoto);
 		 
 		 akimoto.listerConnaissance();
-		 akimoto.boire("thé");;
+		 akimoto.boire("thé");
 	}
 }
